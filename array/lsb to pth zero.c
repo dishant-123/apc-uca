@@ -12,4 +12,4 @@ int main()
 	printf("%d",n);
 	//mask = ~((1 << i+1 ) - 1);
 	//x &= mask;
-}c
+}

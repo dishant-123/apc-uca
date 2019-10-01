@@ -1,4 +1,4 @@
-//1122464337
+//1 1 2 2 4 6 4 3 3  7
 //output is 6 7
 //any positive and negative number
 //o(n) complexity

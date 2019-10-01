@@ -20,22 +20,37 @@ int comparator(const *a,const *b)
 }
 void merge(struct student *arr,int *s)
 {
-        for(int j=0;j<*s;j++)
+	int j,k,c=0;
+        for( j=0;j<*s;j++)
         {
-            if(arr[j].end>=arr[j+1].start)
+            if(arr[j].end>=arr[j+1].start && j+1<*s)
             {
                 int max=arr[j].end>arr[j+1].end?arr[j].end:arr[j+1].end;
-                arr[j].end=max;
+                //arr[j].end=max;
                // arr[j].start=arr[j].start;
-                for(int k=j+1;k<*s;k++)
+               arr[j+1].start=arr[j].start;
+               arr[j+1].end=max;
+                /*for(k=j+1;k<*s;k++)
                 {
                     arr[k].start=arr[k+1].start;
                     arr[k].end=arr[k+1].end;
-                }
-                *s=*s-1;
-                 j--;
+                }*/
+               // *s=*s-1;
+                // j--;
+                 c++;
             }
+            
         }
+        //complexity decreases.
+        k=0;
+        int i;
+        for(i=c;i<*s;i++)
+        {
+        	arr[k].start=arr[i].start;
+        	arr[k].end=arr[i].end;
+        	k++;
+		}
+		*s=*s-c;
 }
 int main()
 {

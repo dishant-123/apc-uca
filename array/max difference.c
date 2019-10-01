@@ -10,10 +10,12 @@ struct student
 };
 int comparator(const *p,const *q)
 {
-    int l=*(int *)p;
-    int r=*(int *)q;
-    //return (((struct student*)p)->index,((struct student *)p)->index);
+    //int l=*(int *)p;
+    //int r=*(int *)q;
+    int l=((struct student*)p)->rollno;
+    int r=((struct student*)q)->rollno;
     return l-r;
+    //return l-r;
       
 }
 int main()

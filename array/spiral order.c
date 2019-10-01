@@ -4,7 +4,7 @@
 #include <stdio.h>
 int main()
 {
-    int n;
+    int n,j;
     scanf("%d",&n);
     int a=0,b=n-1,c=n-1,d=0,i,cnt=0;
     int **arr=(int **)malloc(n*n);
@@ -30,7 +30,7 @@ int main()
             arr[c][i]=cnt++;
         }
         c--;
-        for(int i=c;i>=a;i--)
+        for( i=c;i>=a;i--)
         {
             arr[i][d]=cnt++;
         }
@@ -39,7 +39,7 @@ int main()
     }
     for(i=0;i<n;i++)
     {
-        for(int j=0;j<n;j++)
+        for(j=0;j<n;j++)
         {
             printf("%d   ",arr[i][j]);
             
